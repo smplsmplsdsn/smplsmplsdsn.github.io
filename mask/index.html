@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3種のマスク</title>
+
+  <style>
+    .mask-image {
+      position: relative;
+      width: 240px;
+      height: 220px;
+
+      mask-image: url(heart.png);
+      mask-repeat: no-repeat;
+      mask-position: 0 0;
+      mask-size: contain;
+    }
+
+    .mask-clip {
+      position: relative;
+      width: 240px;
+      height: 220px;
+
+      clip-path: path("M203.66,3.12c-70.13-18.31-83.66,49.09-83.66,69.67,0-20.58-13.53-87.98-83.66-69.67C-1.64,13.04-2.88,50.23,2.08,72.54s45.18,64.96,68.02,84.79c22.84,19.83,49.9,59.01,49.9,59.01,0,0,27.06-39.17,49.9-59.01s63.05-62.48,68.02-84.79c4.96-22.31,3.72-59.5-34.26-69.42Z");
+    }
+
+    .inner-1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;      
+      background: #ccc;
+    }
+
+    .inner-2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 60%;      
+      background: #f00;
+    }
+    
+    .text-clip {
+      background: url(https://picsum.photos/100/100) center center no-repeat;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      
+      font-size: 150px;
+      font-weight: bold;      
+      line-height: 1;
+    } 
+  </style>
+</head>
+<body>
+  <p>
+    <a href="https://simplesimples.com/web/markup/css/mask-image-text-clip-path/">マスクを使う→ clip-path, mask-image,text-clip の3種</a>
+  </p>
+
+  画像を使ってマスクする（PNG, SVG）
+  httpから始まるURLで適応されるので注意
+  <div class="mask-image">
+    <div class="inner-1"></div>
+    <div class="inner-2"></div>
+  </div>
+
+  クリップ（矩形）を使ってマスクする（SVG）
+  <div class="mask-clip">
+    <div class="inner-1"></div>
+    <div class="inner-2"></div>
+  </div>
+
+  文字の背景に画像を表示する
+  <div class="text-clip">MASK</div>
+</body>
+</html>
