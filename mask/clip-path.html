@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clip-path を使ったいろいろシェイプでのマスク（クリップ）で切り抜く</title>
+
+  <style>
+    .sample {
+      width: 240px;
+      height: 240px;      
+    }
+
+    .sample-1 {
+      clip-path: path("M203.66,3.12c-70.13-18.31-83.66,49.09-83.66,69.67,0-20.58-13.53-87.98-83.66-69.67C-1.64,13.04-2.88,50.23,2.08,72.54s45.18,64.96,68.02,84.79c22.84,19.83,49.9,59.01,49.9,59.01,0,0,27.06-39.17,49.9-59.01s63.05-62.48,68.02-84.79c4.96-22.31,3.72-59.5-34.26-69.42Z");
+    }
+
+    .sample-2 {
+      clip-path: circle(50% at 50% 50%);
+    }
+    
+    .sample-3 {
+      clip-path: ellipse(50% 25% at 50% 50%);
+    }
+
+    .sample-4 {
+      clip-path: inset(10px 20px 30px 40px);
+    }
+
+    .sample-5 {
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+  </style>
+</head>
+<body>
+  <p>
+    記事：<a href="https://simplesimples.com/web/markup/css/mask-image-text-clip-path/">マスクを使う→ clip-path, mask-image,text-clip の3種</a>
+  </p>
+
+  <div class="sample sample-1">
+    <img src="https://picsum.photos/400/300">
+  </div>
+
+  <div class="sample sample-2">
+    <img src="https://picsum.photos/400/300">
+  </div>
+
+  <div class="sample sample-3">
+    <img src="https://picsum.photos/400/300">
+  </div>
+
+  <div class="sample sample-4">
+    <img src="https://picsum.photos/400/300">
+  </div>
+
+  <div class="sample sample-5">
+    <img src="https://picsum.photos/400/300">
+  </div>
+</body>
+</html>
